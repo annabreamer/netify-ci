@@ -5,16 +5,16 @@
   "main": "index.js",
   "scripts": {
     "test": "echo 'Привет!'",
-    "check": "prettier --check './src/**/*.{html,css,js}'",
-    "format": "prettier --write './src/**/*.{html,css,js}'",
-    "lint": "stylelint './src/**/*.css'",
-    "lintfix": "stylelint './src/**/*.css' --fix",
+    "check": "prettier --check ./src/**/*.{html,css,js}",
+    "format": "prettier --write ./src/**/*.{html,css,js}",
+    "lint": "stylelint ./src/**/*.css",
+    "lintfix": "stylelint ./src/**/*.css --fix",
     "checkAll": "npm run check && npm run lint",
     "fixAll": "npm run format && npm run lintfix",
     "build": "gulp build",
     "dev": "gulp",
     "fixAndBuild": "npm run fixAll && npm run build",
-  "lintfixAndPush": "npm run fixAll && git add . && git commit -m 'подготовили к публикации' && git push"
+    "lintfixAndPush": "npm run fixAll && git add . && git commit -m \"подготовили к публикации\" && git push"
   },
   "author": "",
   "license": "ISC",
@@ -26,5 +26,8 @@
     "gulp-plumber": "^1.2.1",
     "prettier": "^3.2.5",
     "stylelint": "^16.5.0"
-  }
+  },
+  "browserslist": [
+    "last 5 versions"
+  ]
 }
